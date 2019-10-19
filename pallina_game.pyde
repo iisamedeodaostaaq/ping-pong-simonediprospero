@@ -56,6 +56,7 @@ def draw():
     textSize(20)
     text(punt1, 0,20)
     
+   
     
 def keyPressed():
     global x_racchetta,x_racchetta1
