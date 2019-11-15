@@ -1,3 +1,4 @@
+## Prof.: Nei commenti non rusare variabile, metti cosa rappresenta quella variabile 
 x_Circle=0 #variabile coordinata x della pallina
 y_Circle=0 #variabile coordinata y della pallina
 circleWidth=40 #variabile larghezza pallina
@@ -26,6 +27,7 @@ def setup():
     x_Circle= totalWidth/2 #posizionare la pallina al centro nella coordinata x
     y_Circle= totalHeigth/2 #posizionare la pallina al centro nella coordinata y
     rectMode(CENTER) #metodo per mettere le due racchette al centro del campo di gioco 
+## Prof.: RectMode non serve per posizionare ma per riferire i rettangolo utilizzando il punto centrale
     textSize(25)#grandezza testo
 
     
@@ -107,6 +109,7 @@ def contactPaddle():
             x_circleSpeed = -x_circleSpeed #rimbalzo della pallina al contatto con la racchetta
         
 def restrictPaddle():
+## Prof.: non belo il ribalzo della racchetta sui bordi: meglio fermarsi sul bordo
     global y_paddleLeft, paddleHeigth, paddleSpace, y_paddleRight
     if(y_paddleLeft - paddleHeigth/2 < 0): #controllo quando la pallina tocca lo spigolo della racchetta sinistra
         y_paddleLeft = y_paddleLeft + paddleSpace
